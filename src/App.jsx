@@ -74,7 +74,7 @@ function LabTest() {
         className="lab-input"
         placeholder="Test Name"
         value={testName}
-        onChange={(e) => setTestName(e.target.value)}
+        onChange={(event) => setTestName(event.target.value)}
       />
 
       {subTests.map((subTest, stIndex) => (
@@ -83,7 +83,7 @@ function LabTest() {
             className="lab-input"
             placeholder="Enter Sub Test"
             value={subTest.name}
-            onChange={(e) => updateSubTestName(stIndex, e.target.value)}
+            onChange={(event) => updateSubTestName(stIndex, event.target.value)}
           />
 
           <button
@@ -104,8 +104,8 @@ function LabTest() {
                 className="lab-input"
                 placeholder="Enter Sub Category"
                 value={subCategory.name}
-                onChange={(e) =>
-                  updateSubCategoryName(stIndex, scIndex, e.target.value)
+                onChange={(event) =>
+                  updateSubCategoryName(stIndex, scIndex, event.target.value)
                 }
               />
 
@@ -127,12 +127,12 @@ function LabTest() {
                     className="lab-input"
                     placeholder="Enter Option"
                     value={option.name}
-                    onChange={(e) =>
+                    onChange={(event) =>
                       updateOptionName(
                         stIndex,
                         scIndex,
                         opIndex,
-                        e.target.value
+                        event.target.value
                       )
                     }
                   />
@@ -159,7 +159,7 @@ function LabTest() {
         className="lab-textarea"
         placeholder="Description"
         value={description}
-        onChange={(e) => setDescription(e.target.value)}
+        onChange={(event) => setDescription(event.target.value)}
       />
 
       <button className="btn btn-main" onClick={submitHandler}>
